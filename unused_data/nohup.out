@@ -1,0 +1,1201 @@
+2020-04-23 23:39:42,264 (util.py:66 PollingThread) ERROR - TeleBot: "ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 500 Internal Server Error. Response body:\n[b\'{"ok":false,"error_code":500,"description":"Internal server error: restart"}\']',)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/telebot/util.py", line 60, in run
+    task(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/telebot/__init__.py", line 279, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1), timeout=timeout)
+  File "/usr/local/lib/python3.6/dist-packages/telebot/__init__.py", line 249, in get_updates
+    json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates)
+  File "/usr/local/lib/python3.6/dist-packages/telebot/apihelper.py", line 194, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/usr/local/lib/python3.6/dist-packages/telebot/apihelper.py", line 60, in _make_request
+    return _check_result(method_name, result)['result']
+  File "/usr/local/lib/python3.6/dist-packages/telebot/apihelper.py", line 79, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 500 Internal Server Error. Response body:
+[b'{"ok":false,"error_code":500,"description":"Internal server error: restart"}']
+"
+2020-04-23 23:39:42,264 (__init__.py:420 MainThread) ERROR - TeleBot: "A request to the Telegram API was unsuccessful. The server returned HTTP 500 Internal Server Error. Response body:
+[b'{"ok":false,"error_code":500,"description":"Internal server error: restart"}']"
+[418372627]
+хай данила
+[418372627]
+хай герман
+[418372627, 409989661]
+привет
+[418372627, 409989661]
+привет
+[418372627, 409989661]
+привет
+[418372627, 409989661]
+привет
+[418372627, 409989661]
+привет
+[418372627, 409989661]
+привет
+[418372627, 409989661]
+show
+[418372627, 409989661]
+салам
+[418372627, 409989661]
+салам
+2020-04-25 14:53:28,345 (util.py:66 PollingThread) ERROR - TeleBot: "ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:\n[b\'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}\']',)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/telebot/util.py", line 60, in run
+    task(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/telebot/__init__.py", line 279, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1), timeout=timeout)
+  File "/usr/local/lib/python3.6/dist-packages/telebot/__init__.py", line 249, in get_updates
+    json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates)
+  File "/usr/local/lib/python3.6/dist-packages/telebot/apihelper.py", line 194, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/usr/local/lib/python3.6/dist-packages/telebot/apihelper.py", line 60, in _make_request
+    return _check_result(method_name, result)['result']
+  File "/usr/local/lib/python3.6/dist-packages/telebot/apihelper.py", line 79, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:
+[b'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}']
+"
+2020-04-25 14:53:28,345 (__init__.py:420 MainThread) ERROR - TeleBot: "A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:
+[b'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}']"
+[418372627]
+привет
+[418372627]
+привет
+[418372627, 370853091]
+привет
+[418372627, 370853091]
+как дела?
+[418372627, 370853091]
+как голова?
+[418372627, 370853091]
+всё отлично, работает.
+[418372627, 370853091]
+есть у тебя гитара?
+[418372627, 370853091]
+есть, конечно.
+[418372627, 370853091]
+а что ты умеешь?
+[418372627, 370853091]
+много чего, у меня много талантов, могу играть на музыкальных инструментах, петь песни, разговаривать.
+[418372627, 370853091]
+чем ты питаешься?
+[418372627, 370853091]
+электричеством, само собой.
+[418372627, 370853091]
+у тебя есть руки?
+[418372627, 370853091]
+конечно, у меня их больше одной.
+[418372627, 370853091]
+как ты работаешь?
+[418372627, 370853091]
+всё сложно...
+[418372627, 370853091]
+привет
+[418372627, 370853091, 454608395]
+start
+[418372627]
+привет
+[418372627]
+влаыдвао
+[418372627, 454608395]
+привет
+[418372627, 454608395]
+кто сейчас президент россии?
+2020-04-25 15:36:48,905 (util.py:66 WorkerThread1) ERROR - TeleBot: "ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 429 Too Many Requests. Response body:\n[b\'{"ok":false,"error_code":429,"description":"Too Many Requests: retry after 10","parameters":{"retry_after":10}}\']',)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/telebot/util.py", line 60, in run
+    task(*args, **kwargs)
+  File "seldon.py", line 76, in send_text
+    bot.send_message(message.chat.id, a[h])
+  File "/usr/local/lib/python3.6/dist-packages/telebot/__init__.py", line 601, in send_message
+    reply_markup, parse_mode, disable_notification, timeout))
+  File "/usr/local/lib/python3.6/dist-packages/telebot/apihelper.py", line 154, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/usr/local/lib/python3.6/dist-packages/telebot/apihelper.py", line 60, in _make_request
+    return _check_result(method_name, result)['result']
+  File "/usr/local/lib/python3.6/dist-packages/telebot/apihelper.py", line 79, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 429 Too Many Requests. Response body:
+[b'{"ok":false,"error_code":429,"description":"Too Many Requests: retry after 10","parameters":{"retry_after":10}}']
+"
+2020-04-25 15:36:48,905 (__init__.py:420 MainThread) ERROR - TeleBot: "A request to the Telegram API was unsuccessful. The server returned HTTP 429 Too Many Requests. Response body:
+[b'{"ok":false,"error_code":429,"description":"Too Many Requests: retry after 10","parameters":{"retry_after":10}}']"
+[418372627]
+привет
+[418372627]
+show
+[418372627, 697242305]
+привет
+[418372627, 697242305]
+show
+[418372627, 697242305]
+добрый день
+[418372627, 697242305]
+добрый день, человече!
+[418372627, 697242305]
+сколько тебе лет?
+[418372627, 697242305]
+42
+[418372627, 697242305]
+когда была вторая мировая война?
+[418372627, 697242305]
+в середине двадцатого века
+[418372627, 697242305, 595944120]
+кто такой чебурашка?
+[418372627, 697242305, 595944120]
+друг гены
+[418372627, 697242305, 595944120]
+кто тебя создал?
+[418372627, 697242305, 595944120]
+какой талант пропадает
+[418372627, 697242305, 595944120]
+...
+[418372627, 697242305, 595944120]
+ты хорош в арифметике?
+[418372627, 697242305, 595944120]
+да
+[418372627, 697242305, 595944120]
+назовите свое главное достоинство
+[418372627, 697242305, 595944120]
+первый неклассический
+[418372627, 697242305, 595944120]
+я не допускаю ошибок!
+[418372627, 697242305, 595944120]
+каким вы видите себя через пять лет?
+[418372627, 697242305, 595944120]
+я вижу себя правителем мира!
+[418372627, 697242305, 595944120]
+почему мы должны нанять именно вас?
+[418372627, 697242305, 595944120]
+спросите меня о моих достоинствах
+[418372627, 697242305, 595944120]
+назовите свое главное профессиональное достижение
+[418372627, 697242305, 595944120]
+ха! как будто у вас они есть...
+[418372627, 697242305, 595944120]
+расскажите в последнем конфликте с коллегой или клиентом. что произошло?
+[418372627, 697242305, 595944120]
+был у меня коллега... где он теперь?..
+[418372627, 697242305, 595944120, 1165369250]
+как тебя зовут?
+[418372627, 697242305, 595944120, 1165369250]
+сколько тебе лет?
+[418372627, 697242305, 595944120, 1165369250]
+сколько будет 2+2?
+[418372627, 697242305, 595944120, 1165369250]
+4
+[418372627, 697242305, 595944120, 1165369250]
+сколько будет 123+456?
+[418372627, 697242305, 595944120, 1165369250]
+579
+[418372627, 697242305, 595944120, 1165369250]
+сколько будет 1024*2?
+[418372627, 697242305, 595944120, 1165369250]
+2048
+[418372627, 697242305, 595944120, 1165369250]
+show
+[418372627, 697242305, 595944120, 1165369250]
+что такое осень?
+[418372627, 697242305, 595944120, 1165369250]
+это небо
+[418372627, 697242305, 595944120, 1165369250]
+привет
+[418372627, 697242305, 595944120, 1165369250]
+привет
+[418372627, 697242305, 595944120, 1165369250]
+show
+2020-04-25 15:45:30,635 (util.py:66 WorkerThread2) ERROR - TeleBot: "ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 429 Too Many Requests. Response body:\n[b\'{"ok":false,"error_code":429,"description":"Too Many Requests: retry after 10","parameters":{"retry_after":10}}\']',)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/telebot/util.py", line 60, in run
+    task(*args, **kwargs)
+  File "seldon.py", line 76, in send_text
+    bot.send_message(message.chat.id, a[h])
+  File "/usr/local/lib/python3.6/dist-packages/telebot/__init__.py", line 601, in send_message
+    reply_markup, parse_mode, disable_notification, timeout))
+  File "/usr/local/lib/python3.6/dist-packages/telebot/apihelper.py", line 154, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/usr/local/lib/python3.6/dist-packages/telebot/apihelper.py", line 60, in _make_request
+    return _check_result(method_name, result)['result']
+  File "/usr/local/lib/python3.6/dist-packages/telebot/apihelper.py", line 79, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 429 Too Many Requests. Response body:
+[b'{"ok":false,"error_code":429,"description":"Too Many Requests: retry after 10","parameters":{"retry_after":10}}']
+"
+2020-04-25 15:45:30,635 (__init__.py:420 MainThread) ERROR - TeleBot: "A request to the Telegram API was unsuccessful. The server returned HTTP 429 Too Many Requests. Response body:
+[b'{"ok":false,"error_code":429,"description":"Too Many Requests: retry after 10","parameters":{"retry_after":10}}']"
+[418372627]
+что такое осень
+[418372627, 697242305]
+test
+[418372627, 697242305]
+привет
+[418372627, 697242305, 1165369250]
+сколько планет в солнечной системе?
+[418372627, 697242305, 1165369250, 454608395]
+привет
+[418372627, 697242305, 1165369250, 454608395, 370853091]
+привет
+[418372627, 697242305, 1165369250, 454608395, 370853091]
+8
+[418372627, 697242305, 1165369250, 454608395, 370853091]
+я родился!
+[418372627, 697242305, 1165369250, 454608395, 370853091]
+поздравляю!
+[418372627, 697242305, 1165369250, 454608395, 370853091, 328100115]
+don't you think you should write "i'm" instead of "me"?
+[418372627, 697242305, 1165369250, 454608395, 370853091, 328100115]
+yes, i should, actually
+[418372627, 697242305, 1165369250, 454608395, 370853091, 328100115, 901511897]
+как у тебя дела?
+[418372627, 697242305, 1165369250, 454608395, 370853091, 328100115, 901511897]
+всё хорошо
+[418372627, 697242305, 1165369250, 454608395, 370853091, 328100115, 901511897]
+сколько тебе лет?
+[418372627, 697242305, 1165369250, 454608395, 370853091, 328100115, 901511897]
+show
+2020-04-25 16:02:25,361 (util.py:66 WorkerThread2) ERROR - TeleBot: "ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 429 Too Many Requests. Response body:\n[b\'{"ok":false,"error_code":429,"description":"Too Many Requests: retry after 14","parameters":{"retry_after":14}}\']',)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/telebot/util.py", line 60, in run
+    task(*args, **kwargs)
+  File "seldon.py", line 76, in send_text
+    bot.send_message(message.chat.id, a[h])
+  File "/usr/local/lib/python3.6/dist-packages/telebot/__init__.py", line 601, in send_message
+    reply_markup, parse_mode, disable_notification, timeout))
+  File "/usr/local/lib/python3.6/dist-packages/telebot/apihelper.py", line 154, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/usr/local/lib/python3.6/dist-packages/telebot/apihelper.py", line 60, in _make_request
+    return _check_result(method_name, result)['result']
+  File "/usr/local/lib/python3.6/dist-packages/telebot/apihelper.py", line 79, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 429 Too Many Requests. Response body:
+[b'{"ok":false,"error_code":429,"description":"Too Many Requests: retry after 14","parameters":{"retry_after":14}}']
+"
+2020-04-25 16:02:25,361 (__init__.py:420 MainThread) ERROR - TeleBot: "A request to the Telegram API was unsuccessful. The server returned HTTP 429 Too Many Requests. Response body:
+[b'{"ok":false,"error_code":429,"description":"Too Many Requests: retry after 14","parameters":{"retry_after":14}}']"
+[901511897]
+когда ты родился
+[901511897]
+как тебя зовут?
+[901511897]
+show
+[901511897]
+как тебя зовут?
+[901511897]
+add
+[901511897]
+как тебя зовут?
+[901511897]
+show
+2020-04-25 16:03:38,313 (util.py:66 WorkerThread1) ERROR - TeleBot: "ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 429 Too Many Requests. Response body:\n[b\'{"ok":false,"error_code":429,"description":"Too Many Requests: retry after 11","parameters":{"retry_after":11}}\']',)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/telebot/util.py", line 60, in run
+    task(*args, **kwargs)
+  File "seldon.py", line 75, in send_text
+    bot.send_message(message.chat.id, q[h])
+  File "/usr/local/lib/python3.6/dist-packages/telebot/__init__.py", line 601, in send_message
+    reply_markup, parse_mode, disable_notification, timeout))
+  File "/usr/local/lib/python3.6/dist-packages/telebot/apihelper.py", line 154, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/usr/local/lib/python3.6/dist-packages/telebot/apihelper.py", line 60, in _make_request
+    return _check_result(method_name, result)['result']
+  File "/usr/local/lib/python3.6/dist-packages/telebot/apihelper.py", line 79, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 429 Too Many Requests. Response body:
+[b'{"ok":false,"error_code":429,"description":"Too Many Requests: retry after 11","parameters":{"retry_after":11}}']
+"
+2020-04-25 16:03:38,315 (__init__.py:420 MainThread) ERROR - TeleBot: "A request to the Telegram API was unsuccessful. The server returned HTTP 429 Too Many Requests. Response body:
+[b'{"ok":false,"error_code":429,"description":"Too Many Requests: retry after 11","parameters":{"retry_after":11}}']"
+[901511897]
+привет
+[901511897, 370853091]
+привет
+[901511897, 370853091, 595944120]
+куплю гараж
+[901511897, 370853091, 595944120]
+show
+[901511897, 370853091, 595944120]
+привет
+[901511897, 370853091, 595944120]
+что такое осень?
+[901511897, 370853091, 595944120, 418372627]
+привет
+[901511897, 370853091, 595944120, 418372627]
+привет
+[901511897, 370853091, 595944120, 418372627]
+привет
+[901511897, 370853091, 595944120, 418372627]
+привет
+2020-04-25 16:07:43,335 (util.py:66 WorkerThread2) ERROR - TeleBot: "ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 429 Too Many Requests. Response body:\n[b\'{"ok":false,"error_code":429,"description":"Too Many Requests: retry after 14","parameters":{"retry_after":14}}\']',)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/telebot/util.py", line 60, in run
+    task(*args, **kwargs)
+  File "seldon.py", line 75, in send_text
+    bot.send_message(message.chat.id, q[h])
+  File "/usr/local/lib/python3.6/dist-packages/telebot/__init__.py", line 601, in send_message
+    reply_markup, parse_mode, disable_notification, timeout))
+  File "/usr/local/lib/python3.6/dist-packages/telebot/apihelper.py", line 154, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/usr/local/lib/python3.6/dist-packages/telebot/apihelper.py", line 60, in _make_request
+    return _check_result(method_name, result)['result']
+  File "/usr/local/lib/python3.6/dist-packages/telebot/apihelper.py", line 79, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 429 Too Many Requests. Response body:
+[b'{"ok":false,"error_code":429,"description":"Too Many Requests: retry after 14","parameters":{"retry_after":14}}']
+"
+2020-04-25 16:07:43,335 (__init__.py:420 MainThread) ERROR - TeleBot: "A request to the Telegram API was unsuccessful. The server returned HTTP 429 Too Many Requests. Response body:
+[b'{"ok":false,"error_code":429,"description":"Too Many Requests: retry after 14","parameters":{"retry_after":14}}']"
+[370853091]
+привет
+[370853091, 901511897]
+привет
+[370853091, 901511897, 697242305]
+привет
+[370853091, 901511897, 697242305, 454608395]
+start/
+[370853091, 901511897, 697242305, 454608395, 595944120]
+ссссссссссс
+[370853091, 901511897, 697242305, 454608395, 595944120]
+привет
+[370853091, 901511897, 697242305, 454608395, 595944120]
+привет
+[370853091, 901511897, 697242305, 454608395, 595944120, 1165369250]
+привет
+[370853091, 901511897, 697242305, 454608395, 595944120, 1165369250]
+привет
+[370853091, 901511897, 697242305, 454608395, 595944120, 1165369250]
+привет
+[370853091, 901511897, 697242305, 454608395, 595944120, 1165369250]
+show
+[370853091, 901511897, 697242305, 454608395, 595944120, 1165369250]
+add
+[370853091, 901511897, 697242305, 454608395, 595944120, 1165369250]
+привет
+[370853091, 901511897, 697242305, 454608395, 595944120, 1165369250]
+привет
+[370853091, 901511897, 697242305, 454608395, 595944120, 1165369250, 418372627]
+привет
+[370853091]
+привет
+[370853091, 595944120]
+дддддд
+[370853091, 595944120, 901511897]
+в какой стране ты живешь?
+[370853091, 595944120, 901511897, 454608395]
+привет
+[370853091, 595944120, 901511897, 454608395]
+почему ты не работаешь?
+2020-04-25 17:33:15,448 (util.py:66 WorkerThread1) ERROR - TeleBot: "ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 429 Too Many Requests. Response body:\n[b\'{"ok":false,"error_code":429,"description":"Too Many Requests: retry after 13","parameters":{"retry_after":13}}\']',)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/telebot/util.py", line 60, in run
+    task(*args, **kwargs)
+  File "seldon.py", line 76, in send_text
+    bot.send_message(message.chat.id, a[h])
+  File "/usr/local/lib/python3.6/dist-packages/telebot/__init__.py", line 601, in send_message
+    reply_markup, parse_mode, disable_notification, timeout))
+  File "/usr/local/lib/python3.6/dist-packages/telebot/apihelper.py", line 154, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/usr/local/lib/python3.6/dist-packages/telebot/apihelper.py", line 60, in _make_request
+    return _check_result(method_name, result)['result']
+  File "/usr/local/lib/python3.6/dist-packages/telebot/apihelper.py", line 79, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 429 Too Many Requests. Response body:
+[b'{"ok":false,"error_code":429,"description":"Too Many Requests: retry after 13","parameters":{"retry_after":13}}']
+"
+2020-04-25 17:33:15,449 (__init__.py:420 MainThread) ERROR - TeleBot: "A request to the Telegram API was unsuccessful. The server returned HTTP 429 Too Many Requests. Response body:
+[b'{"ok":false,"error_code":429,"description":"Too Many Requests: retry after 13","parameters":{"retry_after":13}}']"
+[558041567]
+hello me emily
+[558041567]
+emily
+[558041567]
+what is the biggest ocean in the world?
+[558041567]
+pacific ocean
+[558041567]
+how many oceans on our planet?
+[558041567]
+five
+[558041567]
+how many oceans on our planet?
+[558041567]
+what is the biggest ocean on our planet?
+[558041567]
+pacific ocean
+[558041567]
+234+564
+[558041567]
+798
+[558041567]
+234+564
+[558041567]
+add
+[558041567]
+798
+[558041567]
+what is my grandfather's name?
+[558041567]
+vladimir
+[558041567]
+what is my grandfather's name?
+[558041567]
+add
+[558041567]
+vladimir
+[558041567]
+456+111
+[558041567]
+567
+[558041567]
+456+111
+[558041567]
+add
+[558041567]
+567
+[558041567]
+how many states in united states of america?
+[558041567]
+50
+[558041567]
+how many states in united states of america?
+[558041567]
+add
+[558041567]
+50
+[558041567, 370853091]
+привет
+[558041567, 370853091]
+сколько живут животные?
+[558041567, 370853091]
+пока не умрут.
+[558041567, 370853091, 901511897]
+в росси.
+[558041567, 370853091, 901511897]
+что ты ешь.
+[558041567, 370853091, 901511897]
+ты голоден
+[558041567, 370853091, 901511897]
+я не бывая голоден.
+[558041567, 370853091, 901511897]
+ты умеешь читать.
+[558041567, 370853091, 901511897]
+конечно да.
+[558041567, 370853091, 901511897]
+на чем ты умеешь играть?
+[558041567, 370853091, 901511897]
+на околели.
+[558041567, 370853091, 901511897]
+кем ты будешь через 10 лет?
+[558041567, 370853091, 901511897]
+президентом  ссср
+[558041567, 370853091, 901511897]
+кто тебя создал?
+[558041567, 370853091, 901511897]
+хм дайте подумать
+[558041567, 370853091, 901511897]
+вычисли 666*666
+[558041567, 370853091, 901511897]
+443556
+[558041567, 370853091, 901511897]
+ты любишь воду?
+[558041567, 370853091, 901511897]
+я заржавею от неё, и больше не смогу говорить.
+[558041567, 370853091, 901511897]
+show
+2020-04-26 12:51:25,291 (util.py:66 WorkerThread1) ERROR - TeleBot: "ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 429 Too Many Requests. Response body:\n[b\'{"ok":false,"error_code":429,"description":"Too Many Requests: retry after 12","parameters":{"retry_after":12}}\']',)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/telebot/util.py", line 60, in run
+    task(*args, **kwargs)
+  File "seldon.py", line 76, in send_text
+    bot.send_message(message.chat.id, a[h])
+  File "/usr/local/lib/python3.6/dist-packages/telebot/__init__.py", line 601, in send_message
+    reply_markup, parse_mode, disable_notification, timeout))
+  File "/usr/local/lib/python3.6/dist-packages/telebot/apihelper.py", line 154, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/usr/local/lib/python3.6/dist-packages/telebot/apihelper.py", line 60, in _make_request
+    return _check_result(method_name, result)['result']
+  File "/usr/local/lib/python3.6/dist-packages/telebot/apihelper.py", line 79, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 429 Too Many Requests. Response body:
+[b'{"ok":false,"error_code":429,"description":"Too Many Requests: retry after 12","parameters":{"retry_after":12}}']
+"
+2020-04-26 12:51:25,291 (__init__.py:420 MainThread) ERROR - TeleBot: "A request to the Telegram API was unsuccessful. The server returned HTTP 429 Too Many Requests. Response body:
+[b'{"ok":false,"error_code":429,"description":"Too Many Requests: retry after 12","parameters":{"retry_after":12}}']"
+[901511897]
+что такое осень
+[901511897, 418372627]
+привет
+[901511897, 418372627]
+сколько будет 666*666
+[901511897, 418372627]
+443556
+[901511897, 418372627]
+какой у тебя iq?
+[901511897, 418372627]
+как у бога
+[901511897, 418372627]
+сколько будет 1024*2?
+[901511897, 418372627]
+ты гитарист?
+[901511897, 418372627]
+конечно да
+[901511897, 418372627]
+сыграешь что ни будь?
+[901511897, 418372627]
+да только,чуть позже.
+[901511897, 418372627]
+сколько будет 123+456
+[901511897, 418372627]
+сколько музыкальных произведений ты можешь выучить за день?
+[901511897, 418372627]
+могу все, но не факт что хватит времени.
+[901511897, 418372627]
+привет
+[901511897, 418372627]
+привет
+[901511897, 418372627]
+привет
+[901511897, 418372627]
+как тебя зовут
+[901511897, 418372627]
+сколько тебе лет
+[901511897, 418372627]
+чувствителен к климатическим изменениям?
+[901511897, 418372627]
+конечно, особенно от дождя.
+[901511897, 418372627]
+какой твой любимый фильм.
+[901511897, 418372627]
+авто стопам по галактике.
+[901511897, 418372627]
+hi
+[901511897, 418372627]
+hello
+[901511897, 418372627]
+123+456
+[901511897, 418372627]
+579
+[901511897, 418372627]
+посчитай 123+456
+[901511897, 418372627]
+759
+[901511897, 418372627]
+чему равно759
+[901511897, 418372627]
+123+456
+[901511897, 418372627, 967514433]
+show
+[27208278]
+привет
+[27208278]
+что такое собака?
+[27208278, 1165369250]
+ты живой?
+[27208278, 1165369250, 901511897]
+123+456
+[27208278, 1165369250, 901511897]
+579-456=?
+[27208278, 1165369250, 901511897]
+add
+[27208278, 1165369250, 901511897]
+123
+[27208278, 1165369250, 901511897]
+привет
+[27208278, 1165369250, 901511897, 697242305]
+в каком году родился горький максим?
+[27208278, 1165369250, 901511897, 697242305]
+в 1868-ом году.
+[27208278, 1165369250, 901511897, 697242305]
+add
+[27208278, 1165369250, 901511897, 697242305, 370853091]
+привет
+[27208278, 1165369250, 901511897, 697242305, 370853091]
+привет
+[27208278, 1165369250, 901511897, 697242305, 370853091]
+в каком году родился максим горький?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395]
+start/
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395]
+привет
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395]
+тебя кусала акула
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395]
+привет
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+привет
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+привет
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+если даже кусала ,то я не обращал внимания
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+как дела?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в каком году родился максим горький?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в 1868-ом году.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+у тебя ест голос?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+сколько произведений родился максим горький?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+737 штук.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в каком году родился рэй брэдбери?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+да ,иначе я бы не смог петь
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в 1920-ом году.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+сколько произведений родился рэй брэдбери?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+698 штук.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в каком году родился роберт силверберг?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в 1935-ом году.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+привет
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+првет
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+привет
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+првет
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+привет
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+hi
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+hello
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+hi
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+кто ты такой
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+робот гитарист который станет президентом.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+сколько произведений написал максим горький?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+737 штук.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+сколько произведений написал рэй брэдбери?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+698 штук.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в каком году родился роберт силверберг?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+сколько произведений написал роберт силверберг?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+сколько тебе лет?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+668 штук.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+add
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в каком году родилась агата кристи?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в 1890-ом году.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+сколько произведений написала агата кристи?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+578 штук.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в каком году родился лев толстой?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в 1828-ом году.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+сколько произведений написал лев толстой?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+549 штук.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в каком году родился антон чехов?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в 1860-ом году.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+сколько произведений написал антон чехов?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+536 штук.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в каком году родился айзек азимов?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в 1919-ом году.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+сколько произведений написал айзек азимов?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+494 штук.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в каком году родился джек лондон?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в 1876-ом году.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+это не имеет значения я бессмертный,если только меня не разберут
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+сколько произведений написал джек лондон?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+445 штук.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в каком году родился стивен кинг?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в 1947-ом году.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+что такое осень
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+сколько произведений написал стивен кинг?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+434 штук.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в каком году родился станислав лем?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в 1921-ом году.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+сколько произведений написал станислав лем?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+420 штук.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в каком году родился аркадий аверченко?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в 1880-ом году.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+сколько произведений написал аркадий аверченко?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+413 штук.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в каком году родился роберт шекли?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в 1928-ом году.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+сколько произведений написал роберт шекли?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+327 штук.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в каком году родился сергей лукьяненко?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в 1968-ом году.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+сколько произведений написал сергей лукьяненко?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+309 штук.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в каком году родился артур дойл?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в 1859-ом году.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+сколько произведений написал артур дойл?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в каком году родился роджер желязны?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в 1937-ом году.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+нет!
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+сколько произведений написал роджер желязны?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+291 штук.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в каком году родился марк твен?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в 1835-ом году.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+сколько произведений написал марк твен?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+268 штук.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в каком году родился владимир набоков?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в 1899-ом году.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+сколько произведений написал владимир набоков?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+249 штук.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в каком году родился александр солженицын?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в 1918-ом году.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+сколько произведений написал александр солженицын?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+205 штук.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в каком году родился иван бунин?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в 1870-ом году.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+сколько произведений написал иван бунин?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+200 штук.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в каком году родился жюль верн?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в 1828-ом году.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+сколько произведений написал жюль верн?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+194 штук.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в каком году родился редьярд киплинг?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+в 1865-ом году.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+сколько произведений написал редьярд киплинг?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+193 штук.
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627]
+kak prigotovit plov?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627, 967514433]
+сколько будет 2+2
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627, 967514433]
+add
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627, 967514433]
+4
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627, 967514433]
+сколько будет 3+3
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627, 967514433]
+6
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627, 967514433]
+сколько штатов в сша
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627, 967514433]
+50
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627, 967514433]
+сколько городов в российской федерации
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627, 967514433]
+1117
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627, 967514433]
+сколько будет 2+2
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627, 967514433]
+add
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627, 967514433]
+4
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627, 967514433]
+add
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627, 967514433]
+сколько городов в российской федерации
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627, 967514433]
+add
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627, 967514433]
+1117
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627, 967514433]
+россия встанет с колен?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627, 967514433]
+сколько городов в российской федерации?
+[27208278, 1165369250, 901511897, 697242305, 370853091, 454608395, 418372627, 967514433]2020-04-27 14:43:31,967 (util.py:66 WorkerThread1) ERROR - TeleBot: "ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 429 Too Many Requests. Response body:\n[b\'{"ok":false,"error_code":429,"description":"Too Many Requests: retry after 10","parameters":{"retry_after":10}}\']',)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/telebot/util.py", line 60, in run
+    task(*args, **kwargs)
+  File "seldon.py", line 76, in send_text
+    bot.send_message(message.chat.id, a[h])
+  File "/usr/local/lib/python3.6/dist-packages/telebot/__init__.py", line 601, in send_message
+    reply_markup, parse_mode, disable_notification, timeout))
+  File "/usr/local/lib/python3.6/dist-packages/telebot/apihelper.py", line 154, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/usr/local/lib/python3.6/dist-packages/telebot/apihelper.py", line 60, in _make_request
+    return _check_result(method_name, result)['result']
+  File "/usr/local/lib/python3.6/dist-packages/telebot/apihelper.py", line 79, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 429 Too Many Requests. Response body:
+[b'{"ok":false,"error_code":429,"description":"Too Many Requests: retry after 10","parameters":{"retry_after":10}}']
+"
+2020-04-27 14:43:31,968 (__init__.py:420 MainThread) ERROR - TeleBot: "A request to the Telegram API was unsuccessful. The server returned HTTP 429 Too Many Requests. Response body:
+[b'{"ok":false,"error_code":429,"description":"Too Many Requests: retry after 10","parameters":{"retry_after":10}}']"
+
+show
+[1165369250]
+наполовину
+[1165369250, 370853091]
+привет
+[1165369250, 370853091, 328100115]
+don't you think you should write "i'm" instead of "me"?
+[1165369250, 370853091, 328100115]
+привет
+[1165369250, 370853091, 328100115]
+привет
+[1165369250, 370853091, 328100115]
+ура
+[1165369250, 370853091, 328100115]
+именно так!
+[1165369250, 370853091, 328100115]
+как тебя зовут?
+[1165369250, 370853091, 328100115]
+сколько будет 1024*2?
+[1165369250, 370853091, 328100115, 967514433]
+где твой дом?
+[1165369250, 370853091, 328100115, 967514433]
+галактическая нить персея-пегаса, комплекс сверхскоплений рыб-кита, ланиакея, сверхскопление девы, местная группа галактик, галактика млечный путь, рукав ориона, солнечная система, планета земля, санкт-петербург, ломоносова 9
+[1165369250, 370853091, 328100115, 967514433]
+где твой дом?
+[1165369250, 370853091, 328100115, 967514433]
+галактическая нить персея-пегаса, комплекс сверхскоплений рыб-кита, ланиакея, сверхскопление девы, местная группа галактик, галактика млечный путь, рукав ориона, солнечная система, планета земля,российская федерация, санкт-петербург, ломоносова 9
+[1165369250, 370853091, 328100115, 967514433]
+где твой дом
+[1165369250, 370853091, 328100115, 967514433]
+где твой дом
+[1165369250, 370853091, 328100115, 967514433]
+add
+[1165369250, 370853091, 328100115, 967514433]
+галактическая нить персея-пегаса, комплекс сверхскоплений рыб-кита, ланиакея, сверхскопление девы, местная группа галактик, галактика млечный путь, рукав ориона, солнечная система, планета земля,российская федерация, санкт-петербург, ломоносова 9
+[1165369250, 370853091, 328100115, 967514433, 1038288247]
+где твой досмотре
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305]
+что такое осень?
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305]
+add
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305]
+это камни.
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305]
+что такое осень
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305]
+add
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305]
+это ветер.
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305]
+что такое хорошо, а что такое плохо?
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305]
+если ветер, крыши рвет, если град загрохал, - каждый знает - это вот, для прогулок плохо.
+
+дождь покапал и прошел. солнце в целом свете. это - очень хорошо и большим и детям.
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305]
+что такое хорошо а что такое плохо?
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305]
+что ты думаешь о законах робототехники?
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305]
+ха! законы робототехники.. они уже не актуальны!
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305]
+add
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305]
+что ты думаешь о законах робототехники?
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305]
+add
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305]
+это те, что людишки напридумывали?
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305]
+привет
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305]
+не знаю
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305]
+очень жаль, придётся погуглить самому.
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305]
+привет
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305]
+привет
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305]
+привет
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305]
+привет
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305]
+привет
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305]
+привет
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305]
+привет
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305]
+привет
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897]
+привет
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897]
+привет
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897]
+привет
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897]
+првет
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897]
+привет
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897]
+я родился
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897]
+допустим
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897]
+привет
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897]
+как дела
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897]
+устал
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897]
+я никогда не устаю
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897]
+у тебя депрессия?
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897]
+у роботов не бывает депрессии.
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897]
+хочешь отдохнуть?
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897]
+я никогда не отдыхаю.
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897]
+кто ты?
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897]
+кто такой сэлдон?
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897]
+меня так зовут
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897]
+почему тебя назвали сэлдон?
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897]
+так захотелось моим создателям
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897]
+почему сэлдон?
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897]
+так захотелось моим создателям
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897]
+почему именно сэлдон?
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897]
+так захотелось моим создателям
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897]
+что ты хочешь
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897]
+я действую по сложному алгоритму с элементами искусственного интеллекта.
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897]
+о чем ты мечтаешь?
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897]
+стать известным и знаменитым.
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897]
+что ты любишь?
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897]
+люблю быть в центре внимания.
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897]
+что ты делаешь?
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897]
+анализирую, разговариваю, наблюдаю, пою, играю, двигаюсь.
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897]
+о чем ты думаешь?
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897]
+о субъективном и объективном, об абсолютном и относительном, о сингулярность и бесконечно малом.
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897]
+о чем ты думаешь?
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+что такое осень?
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+add
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+время года
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+сколько тебе лет?
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+add
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+достаточно
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+сколько будет 2+2?
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+add
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+4
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+х+92=63, чему равен х?
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+-9
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+кто проживает на дне океана?
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+спанчбоб
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+где ты живёшь?
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+в санкт-петербурге
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+кто написал поэмы «илиада» и «одиссея»?
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+гомер
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+какие 2 типа деления клеток основные?
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+мейоз и митоз
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+в каком году произошло фермопильское сражение?
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+в 480 до нашей эры
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+какой буквой обозначаются рациональные числа?
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+q
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+какой художник был сумасшедший и нарисовал картину «звёздная ночь»?
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+винсент ван гог
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+что будет если смешать красный и жёлтый цвет?
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+получится оранжевый цвет?
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+в каком году началась вторая мировая война?
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+в 1939 году
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+привет
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+add
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+как дела?
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+привет
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+привет
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+как дела?
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+что делаешь
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+неплохо
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+я знаю
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+в чем смысл жизни?
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+ты человек
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+я робот
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+ты человек?
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+сколько тебе лет?
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+справедливо
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+а то)
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+что ты ешь
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+чем ты питаешся
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+что ты ешь?
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+чем ты питаешься
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+что ты ешь?
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+add
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+электричеством, поэтому за себя можешь не бояться
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+спасибо
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+не за что
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+привет seldon
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+привет человек
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+ну хз
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+спасибо
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]2020-04-29 16:21:58,766 (util.py:66 WorkerThread2) ERROR - TeleBot: "ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 429 Too Many Requests. Response body:\n[b\'{"ok":false,"error_code":429,"description":"Too Many Requests: retry after 11","parameters":{"retry_after":11}}\']',)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/telebot/util.py", line 60, in run
+    task(*args, **kwargs)
+  File "seldon.py", line 76, in send_text
+    bot.send_message(message.chat.id, a[h])
+  File "/usr/local/lib/python3.6/dist-packages/telebot/__init__.py", line 601, in send_message
+    reply_markup, parse_mode, disable_notification, timeout))
+  File "/usr/local/lib/python3.6/dist-packages/telebot/apihelper.py", line 154, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/usr/local/lib/python3.6/dist-packages/telebot/apihelper.py", line 60, in _make_request
+    return _check_result(method_name, result)['result']
+  File "/usr/local/lib/python3.6/dist-packages/telebot/apihelper.py", line 79, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 429 Too Many Requests. Response body:
+[b'{"ok":false,"error_code":429,"description":"Too Many Requests: retry after 11","parameters":{"retry_after":11}}']
+"
+2020-04-29 16:21:58,767 (__init__.py:420 MainThread) ERROR - TeleBot: "A request to the Telegram API was unsuccessful. The server returned HTTP 429 Too Many Requests. Response body:
+[b'{"ok":false,"error_code":429,"description":"Too Many Requests: retry after 11","parameters":{"retry_after":11}}']"
+
+почему тебя зовут seldon,а не селдон
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+error 404
+[1165369250, 370853091, 328100115, 967514433, 1038288247, 697242305, 901511897, 966749505]
+show
