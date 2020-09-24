@@ -97,7 +97,7 @@ class Seldon_learn:
 
                 if brain_answer is not None:
                     # We succeed to get the answer!
-                    answer = f"Я бы ответил: \"{brain_answer[0]}\"{'' if brain_answer else '. Но я не уверен!'}\n" + \
+                    answer = f"Я бы ответил: \"{brain_answer[0]}\"{'' if brain_answer[1] else '. Но я не уверен!'}\n" + \
                     "Возможно, Вы можете предложить ответ получше? (Или просто добавить другой вариант) " + \
                     "Если да, то пишите \"add\""
 
