@@ -1,5 +1,5 @@
-from lang_processor import get_normal_string
-from mylang import *
+from abstract_lib.lang_processor import get_normal_string
+from abstract_lib.mylang import *
 
 def convert_to_json(input_name : str = "question.txt", out_name : str = "questions.json"):
     with open(input_name, "r") as j1:
@@ -32,5 +32,5 @@ def normalize_keys(filename : str, function : Callable):
 
 if __name__ == '__main__':
     # glue_q_ans("questions.json", "answers.json", "initial_answer_base.json")
-    normalize_keys("../answer_base.json", get_normal_string)
+    normalize_keys("../data/answer_base.json", get_normal_string)
 

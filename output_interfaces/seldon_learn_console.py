@@ -3,8 +3,6 @@ from typing import *
 from seldon_learn import Seldon_learn
 from config import *
 
-from vk_api import *
-
 from threading import Timer
 
 

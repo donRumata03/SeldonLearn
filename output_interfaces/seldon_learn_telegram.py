@@ -1,6 +1,5 @@
 from typing import Any, List, Dict
 
-from mylang import split_words
 from seldon_learn import Seldon_learn
 from config import *
 

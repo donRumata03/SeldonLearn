@@ -6,11 +6,11 @@ import os
 from collections import defaultdict
 from datetime import datetime
 
-from lang_processor import try_counting, stop_words
+from abstract_lib.lang_processor import try_counting, stop_words
 from seldon_core import Seldon
 from typing import *
 
-from mylang import from_utf8_json_file, to_utf8_json_file
+from abstract_lib.mylang import from_utf8_json_file, to_utf8_json_file
 
 import config
 
@@ -27,6 +27,9 @@ class Seldon_learn:
 
     def __init__(self, api, answer_base_filename : str, raw_answer_filename : str, user_state_filename : str):
         self.api = api
+        self.api_has_keyboard_support = hasattr(api, "send_keyboard")
+        self.api_needs_to_be_informed_about_message_end = hasattr(api, "be_informed_about_answer_ending")
+
         self.brain = Seldon(answer_base_filename, raw_answer_filename)
 
         self.user_state_filename = user_state_filename
@@ -41,7 +44,12 @@ class Seldon_learn:
             self.serialize()
 
     def show_main_keyboard(self, user_id : int):
-        self.api.send_keyboard(user_id, ["add", "show"])
+        if self.api_has_keyboard_support:
+            self.api.send_keyboard(user_id, ["add", "show"])
+        else:
+            self.api.send_message(user_id, "_______________________________________________________________"
+                                           "\nSuggested options: \t\t\t|" + "|\t\t|".join(["add", "show"]) + "|\n"
+                                           "_______________________________________________________________")
 
     def process_message(self, user_id : int, message : str):
 
@@ -113,6 +121,8 @@ class Seldon_learn:
                 self.user_states[user_id] = config.USER_STATE_NOTHING
 
         self.process_saving()
+        if self.api_needs_to_be_informed_about_message_end:
+            self.api.be_informed_about_answer_ending(user_id)
 
 
 

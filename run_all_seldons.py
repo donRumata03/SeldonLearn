@@ -1,7 +1,3 @@
-import seldon_learn_console
-import seldon_learn_vk
-import seldon_learn_telegram
-
 # TODO:
 # Individual threads for each bot (anyway, the first time to be asynchronous)
 

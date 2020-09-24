@@ -1,6 +1,6 @@
 import telebot
-from lang_processor import *
-from mylang import *
+from abstract_lib.lang_processor import *
+from abstract_lib.mylang import *
 
 from collections import defaultdict
 from datetime import datetime

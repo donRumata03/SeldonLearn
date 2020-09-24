@@ -4,7 +4,7 @@ import numpy as np
 import pymorphy2
 from typing import *
 
-from mylang import split_words, split_lexems, geom_average, little_geom_average, split_if
+from abstract_lib.mylang import split_words, split_lexems, little_geom_average, split_if
 
 from itertools import combinations
 

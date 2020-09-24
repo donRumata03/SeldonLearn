@@ -2,8 +2,7 @@ import telebot
 import json
 import numpy as np
 import random
-from lang_processor import fisher_wagner_distance
-import pymorphy2
+from abstract_lib.lang_processor import fisher_wagner_distance
 
 key = "1120691185:AAE5yegpxZ6FCTNHywjJ0Kwk46Cx33H_q58"
 
