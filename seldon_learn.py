@@ -106,7 +106,7 @@ class Seldon_learn:
 
                 else:
                     self.api.send_message(user_id,
-                                          f"Упс... Кажется, я не могу ответить на Ваш вопрос... Может быть Вы знаете ответ?")
+                                          "Упс... Кажется, я не могу ответить на Ваш вопрос... Может быть, Вы знаете ответ? Если нет, то пишите \"Стоп\"")
                     self.user_states[user_id] = config.USER_STATE_WAITING_ANSWER
 
             elif self.user_states[user_id] == config.USER_STATE_WAITING_ANSWER:

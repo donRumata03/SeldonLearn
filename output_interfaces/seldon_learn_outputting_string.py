@@ -57,10 +57,13 @@ class collecting_api:
 
         else:
             resultant_string = ""
+            the_keyboard = None
             for object_to_send in self.user_data[user_id]:
                 if isinstance(object_to_send, list):
                     # Keyboard
-                    print_red("Warning: can`t send keyboards because can`t convert to strings!")
+                    print_red("Warning: can`t send keyboards because can`t convert to strings?")
+                    the_keyboard = object_to_send  # TODO
+
                 elif isinstance(object_to_send, str):
                     # Message
                     resultant_string += object_to_send + "\n"
@@ -69,6 +72,9 @@ class collecting_api:
 
 
         self.user_data[user_id] = []
+
+def get_stringy_answer(learning_seldon : Seldon_learn, message : str) -> str:
+    pass
 
 
 seldon = Seldon_learn(collecting_api( console_api(), False ), answer_base_filename, raw_answers_path, bot_filename)
