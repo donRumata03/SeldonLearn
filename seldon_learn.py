@@ -11,6 +11,7 @@ from seldon_core import Seldon
 from typing import *
 
 from abstract_lib.mylang import from_utf8_json_file, to_utf8_json_file
+from abstract_lib.string_util import make_stringy_keyboard
 
 import config
 
@@ -25,10 +26,15 @@ class Seldon_learn:
     last_saving_datetime: datetime = datetime.now()
     changed_something_during_saving_period = False      # IMPORTANT TO UPDATE IT!!!
 
-    def __init__(self, api, answer_base_filename : str, raw_answer_filename : str, user_state_filename : str):
+    def __init__(self, api, answer_base_filename : str, raw_answer_filename : str, user_state_filename : str, is_speaking: bool = False):
+        """ If "is_speaking" is set to True, the speech is simplified a bit: the bot doesn`t ask the user to improve the answer"""
+
         self.api = api
         self.api_has_keyboard_support = hasattr(api, "send_keyboard")
         self.api_needs_to_be_informed_about_message_end = hasattr(api, "be_informed_about_answer_ending")
+
+        self.is_speaking = is_speaking
+        self.adding_code = "Добавить" if is_speaking else "add"
 
         self.brain = Seldon(answer_base_filename, raw_answer_filename)
 
@@ -44,12 +50,15 @@ class Seldon_learn:
             self.serialize()
 
     def show_main_keyboard(self, user_id : int):
+        if self.is_speaking:
+            # Can`t pronounce a keyboard!
+            return
+
         if self.api_has_keyboard_support:
             self.api.send_keyboard(user_id, ["add", "show"])
         else:
-            self.api.send_message(user_id, "_______________________________________________________________"
-                                           "\nSuggested options: \t\t\t|" + "|\t\t|".join(["add", "show"]) + "|\n"
-                                           "_______________________________________________________________")
+            self.api.send_message(user_id, make_stringy_keyboard(["add", "show"]))
+
 
     def process_message(self, user_id : int, message : str):
 
@@ -64,10 +73,10 @@ class Seldon_learn:
                                   f"Хорошо. В переходите в главное меню. Я так понимаю, так и не получится из Вас вытащить ответ на предыдущий вопрос...")
             self.user_states[user_id] = config.USER_STATE_NOTHING
 
-        elif message == "add":
+        elif message == self.adding_code:  # It`s "add" of "Добавить" depending on the speaking mode
             if user_id not in self.user_strings:
                 self.api.send_message(user_id,
-                                      f"Простите, но сначала надо отправить сообщение, а потом уже испольщовать команду \"add\"!")
+                                      f"Простите, но сначала надо {'отправить сообщение' if not self.is_speaking else 'поговорить'}, а потом уже использовать команду \"add\"!")
                 return
 
             self.user_states[user_id] = config.USER_STATE_WAITING_ANSWER
@@ -75,6 +84,9 @@ class Seldon_learn:
 
 
         elif message == "show":
+            if self.is_speaking:
+                self.api.send_message(user_id, "Простите, но эта команда недоступна в режиме разговора!")
+                return
             if user_id not in self.user_strings:
                 self.api.send_message(user_id,
                                       f"Простите, но сначала надо отправить сообщение, а потом уже испольщовать команду \"show\"!")
@@ -97,16 +109,18 @@ class Seldon_learn:
 
                 if brain_answer is not None:
                     # We succeed to get the answer!
-                    answer = f"Я бы ответил: \"{brain_answer[0]}\"{'' if brain_answer[1] else '. Но я не уверен!'}\n" + \
-                    "Возможно, Вы можете предложить ответ получше? (Или просто добавить другой вариант) " + \
-                    "Если да, то пишите \"add\""
+                    if self.is_speaking:
+                        answer = brain_answer[0]
+                    else:
+                        answer = f"Я бы ответил: \"{brain_answer[0]}\"{'' if brain_answer[1] else '. Но я не уверен!'}\n" + \
+                        "Возможно, Вы можете предложить ответ получше? (Или просто добавить другой вариант) " + "Если да, то пишите \"" + self.adding_code + "\""
 
                     self.api.send_message(user_id, answer)  # reply_markup = self.adding_keyboard)
                     self.show_main_keyboard(user_id)
 
                 else:
                     self.api.send_message(user_id,
-                                          "Упс... Кажется, я не могу ответить на Ваш вопрос... Может быть, Вы знаете ответ? Если нет, то пишите \"Стоп\"")
+                                          f"Упс... Кажется, я не могу ответить на Ваш вопрос... Может быть, Вы знаете ответ? Если нет, то {'пишите' if not self.is_speaking else 'скажите'} \"Стоп\"")
                     self.user_states[user_id] = config.USER_STATE_WAITING_ANSWER
 
             elif self.user_states[user_id] == config.USER_STATE_WAITING_ANSWER:
