@@ -26,7 +26,7 @@ class emulated_telegram_api:
             self.cached_keyboards[tuple(keys)] = this_kb
 
 
-        self.m_api.send_message(user_id, text, reply_markup = self.cached_keyboards[tuple(keys)])
+        self.m_api.send_message(user_id, text if text is not None else "", reply_markup = self.cached_keyboards[tuple(keys)])
 
 
 seldon = Seldon_learn(emulated_telegram_api(api), answer_base_filename, raw_answers_path, bot_filename)
