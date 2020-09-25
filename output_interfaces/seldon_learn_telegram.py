@@ -18,7 +18,7 @@ class emulated_telegram_api:
     def send_message(self, user_id, message):
         self.m_api.send_message(user_id, message)
 
-    def send_keyboard(self, user_id : int, keys : List[str]):
+    def send_keyboard(self, user_id : int, keys : List[str], text: str = ""):
         if tuple(keys) not in self.cached_keyboards:
             this_kb = telebot.types.ReplyKeyboardMarkup(True, True)
             this_kb.row("add", "show")
@@ -26,7 +26,7 @@ class emulated_telegram_api:
             self.cached_keyboards[tuple(keys)] = this_kb
 
 
-        self.m_api.send_message(user_id, "", reply_markup = self.cached_keyboards[tuple(keys)])
+        self.m_api.send_message(user_id, text, reply_markup = self.cached_keyboards[tuple(keys)])
 
 
 seldon = Seldon_learn(emulated_telegram_api(api), answer_base_filename, raw_answers_path, bot_filename)
