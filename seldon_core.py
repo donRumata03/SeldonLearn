@@ -292,7 +292,8 @@ class Seldon:
     ################ Public methods: ################
     def answer(self, raw_question : str) -> Optional[Tuple[str, bool]]:
         """
-        :returns: None if there is no answers available, otherwise: answer and the degree of confidence: boolean (True if sure, False if not sure)
+        :returns: None if there is no answers available,
+            otherwise: answer and the degree of confidence: boolean (True if sure, False if not sure)
         """
         lower_question = raw_question.lower()
 

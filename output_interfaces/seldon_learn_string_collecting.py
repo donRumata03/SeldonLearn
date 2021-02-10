@@ -97,7 +97,7 @@ class collecting_api:
         return resultant_string.strip(), the_keyboard
 
 
-def get_stringy_answer(learning_seldon : Seldon_learn, message : str) -> str:
+def get_stringy_answer(learning_seldon: Seldon_learn, message: str) -> str:
     assert isinstance(learning_seldon.api, collecting_api)
     learning_seldon.process_message(user_id = 1, message = message)
     return learning_seldon.api.get_string_from_buffer(user_id = 1)
